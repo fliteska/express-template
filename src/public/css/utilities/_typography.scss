@@ -1,0 +1,52 @@
+body {
+    font-family: map-get($font, sans);
+    font-size: map-get($font, size);
+    line-height: map-get($font, line-height);
+}
+
+blockquote {
+    font-style: italic;
+    font-family: map-get($font, serif);
+}
+
+code {
+    background: #EAEAEA;
+    border: 1px solid darken(#EAEAEA, 5%);
+    border-radius: 4px;
+    color: crimson;
+    display: inline-block;
+    padding: 0 5px;
+    font-family: map-get($font, mono);
+    font-weight: bold;
+    font-style: normal;
+}
+
+pre {
+    code {
+        color: inherit;
+    }
+}
+
+.text {
+    &--bold { font-weight: bold; }
+    &--italic { font-style: italic; }
+    @each $key in $text-transforms {
+        &--#{$key} {
+            text-transform: $key;
+        }
+    }
+    @each $key in $text-alignments {
+        &--#{$key} {
+            text-align: $key;
+        }
+    }
+    @each $label, $width in $mq-breakpoints {
+        @include mq($until: #{$label}) {
+            @each $key in $text-alignments {
+                &--#{$key}\@#{$label} {
+                    text-align: #{$key};
+                }
+            }
+        }
+    }
+}

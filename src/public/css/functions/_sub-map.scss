@@ -1,0 +1,3 @@
+@function sub-map($map, $submap, $type) {
+    @return map-get(map-get($map, $submap), $type);
+}

@@ -1,0 +1,13 @@
+.login {
+    max-width: 300px;
+    margin: 20px auto;
+    label {
+        display: block;
+        margin-bottom: 15px;
+        line-height: 1.5em;
+        input {
+            display: block;
+            width: 100%;
+        }
+    }
+}

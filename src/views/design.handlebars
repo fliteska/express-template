@@ -1,0 +1,26 @@
+<div class='container'>
+    <div class='col-1/1'>
+        <h1>Design</h1>
+    </div>
+    <div class='col-1/1'>
+        <h2>Buttons</h2>
+    </div>
+    <div class='col-1/1'>
+        <button class='btn'>.btn</button>
+        <button class='btn outline'>.btn.outline</button>
+    </div>
+    <div class='col-1/1'>
+        <h2>Colored Buttons</h2>
+        <blockquote>
+            <strong>Note:</strong> The following buttons all have the <code>.block</code> class applied.
+        </blockquote>
+    </div>
+    {{#each colors}}
+        <div class='col-1/2'>
+            <button class='btn block {{this}}'>.btn.{{this}}</button>
+        </div>
+        <div class='col-1/2'>
+            <button class='btn block {{this}} outline'>.btn.{{this}}.outline</button>
+        </div>
+    {{/each}}
+</div>

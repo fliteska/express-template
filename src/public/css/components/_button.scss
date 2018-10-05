@@ -1,0 +1,54 @@
+.btn {
+    $theme: (#AAA, #FFF);
+    $background: nth($theme, 1);
+    $color: nth($theme, 2);
+    background: $background;
+    border: 1px solid darken($background, 10%);
+    border-radius: 5px;
+    color: $color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: map-get($font, size);
+    padding: 0.25em 0.5em;
+    &:hover {
+        background: darken($background, 10%);
+    }
+    &.block {
+        display: block;
+        width: 100%;
+    }
+    &.fill {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &.outline {
+        background: transparent;
+        border-color: $background;
+        color: $background;
+        &:hover {
+            background: transparent;
+            border-color: darken($background, 10%);
+            color: darken($background, 10%);
+        }
+    }
+}
+
+@each $alias, $value in $palette {
+    $background: nth($value, 1);
+    $color: nth($value, 2);
+    .btn.#{$alias} {
+        background: $background;
+        color: $color;
+        &.outline {
+            background: transparent;
+            color: $background;
+            border-color: $background;
+            &:hover {
+                background: transparent;
+                border-color: darken($background, 10%);
+                color: darken($background, 10%);
+            }
+        }
+    }
+}

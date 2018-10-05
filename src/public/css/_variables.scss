@@ -1,0 +1,60 @@
+$mq-breakpoints: (
+    xs: 320px,
+    sm: 480px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+) !default;
+
+$font: (
+    color: #1B2432,
+    sans: (Helvetica, Arial, sans-serif),
+    serif: (Georgia, Times, 'Times New Roman', serif),
+    mono: ('Courier New', Courier, monospace),
+    size: 16px,
+    line-height: 2em,
+);
+
+$directions: (
+    null,
+    -top,
+    -right,
+    -bottom,
+    -left,
+) !default;
+
+$spacing-properties: (
+    padding,
+    margin,
+) !default;
+
+$palette: (
+    primary: (#0080FF, #FFF),
+    secondary: (#4C5C68, #FFF),
+    dark: (#1B2432, #FFF),
+    light: (#EEE, #1B2432),
+    success: (#2ecc71, #FFF),
+    error: (#e74c3c, #FFF),
+    warning: (#fab633, #FFF),
+);
+
+$text-transforms: (
+    lowercase,
+    uppercase,
+    capitalize,
+    "full-width",
+    none,
+) !default;
+
+$text-alignments: (
+    center,
+    left,
+    right,
+    justify,
+) !default;
+
+$display-types: (
+    inline,
+    block,
+    inline-block,
+) !default;

@@ -72,9 +72,9 @@ app.use(sassMiddleware({
     sourceMap: false,
 }));
 
-app.use('/', require('./src/routes'));
-
 app.use(express.static(publicDir));
+
+app.use('/', require('./src/routes'));
 
 app.listen(port, () => {
     const { log } = console;

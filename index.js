@@ -17,6 +17,7 @@ const port = process.env.PORT || 3000;
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/express-service';
 
 mongoose.Promise = bluebird;
+require('mongoose-moment')(mongoose);
 
 mongoose.connect(mongoUrl);
 

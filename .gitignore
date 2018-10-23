@@ -64,3 +64,4 @@ typings/
 
 # generated stylesheet
 src/public/css/style.css
+package-lock.json
